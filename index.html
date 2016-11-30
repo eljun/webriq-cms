@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Implements Google's Material Design in Bootstrap.">
+    <title>WebriQ CMS - Dashboard</title>
+    <!-- CSS-->
+    <link rel="icon" href="img/favicon.png" type="image/*">
+    <link rel='stylesheet' href='css/webriq-bootstrap-material-ui.min.css'/>
+  </head>
+  <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
+<!--[if lt IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Layout: Header -->
+<header class="eq-ui-layout-header">
+    <div id="main-eq-ui-app-bar" class="eq-ui-app-bar">
+        <div class="container-fluid">
+            <div class="brand ">
+                <a href="#">
+                    <img src="img/logo.png" alt="Webriq logo">
+                </a>
+            </div>
+
+            <!-- Toggle -->
+            <div class="eq-ui-side-nav-toggle">
+                <div class="svg-anim">
+                  <svg viewBox="0 0 800 600">
+                    <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+                    <path d="M300,320 L540,320" id="middle"></path>
+                    <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+                  </svg>
+                </div>
+            </div>
+
+            <!-- Breadcrumb -->
+            <div class="eq-ui-breadcrumb" data-only-one="true">
+                <ol class="breadcrumb">
+                  <li class="first"><i class="material-icons icon-small">link</i><a href="#">Content</a></li>
+                  <li><a href="#">Post List</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Layout: Sidebar -->
+<div class="eq-ui-side-nav">
+    <div class="eq-ui-side-nav-wrapper">
+        <div class="eq-ui-side-nav-content-wrapper">
+
+            <nav>
+                <!-- Collapsible Menu -->
+                <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                    <!-- Layout: Sidebar: Navigation: Heading -->
+                    <li class="eq-ui-menu-header">
+                        <i class="eq-icon-home material-icons material-icon-rounded">home</i>
+                        <div class="eq-ui-dropdown-toggle">
+                            <a data-target="dropdown-test1" class="collapsible-nav-index eq-ui-waves dropdown-trigger eq-ui-dropdown-left-top" data-hover="false">
+                            <span class="eq-ui-site-title">Lanarkshire Chambers of commerce for business</span><span class="eq-ui-site-title-subtext">lanarkshirechamber.co.uk</span><i class="material-icons">keyboard_arrow_down</i></a>
+                            <ul id="dropdown-test1" class="eq-ui-dropdown eq-ui-dropdown-right">
+                                <li>
+                                    <a href="#!"><i class="material-icons">public</i>Visit Site</a>
+                                </li>
+                                <li>
+                                    <a href="#!"><i class="material-icons">reply_all</i>Logout</a>
+                                </li>
+                                <li>
+                                    <a href="#!"><i class="material-icons">headset_mic</i>Help</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- Layout: Sidebar: Navigation: Divider Title -->
+                    <li class="nav-header">Navigation</li>
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-index" href="./">
+                                <i class="material-icons">line_style</i>
+                                Site Information
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- Layout: Sidebar: Entries: Markdown -->
+                    <li class="eq-ui-add-entry">
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a href='entry.html'>
+                                <i class="material-icons">library_books</i>
+                                Blog Pages
+                            </a>
+                        </div>
+                        <a href='entry.html'>Add</a>
+                    </li>
+                    <li class="eq-ui-add-entry">
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a href='entry.html'>
+                                <i class="material-icons">filter_none</i>
+                                Pages
+                            </a>
+                        </div>
+                        <a href='entry.html'>Add</a>
+                    </li>
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a href='entry.html'>
+                                <i class="material-icons">folder_open</i>
+                                File Manager
+                            </a>
+                        </div>
+                    </li>
+                    <!-- width dropdown -->
+                    <!-- <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-css">
+                                <i class="material-icons">folder_open</i>
+                                CSS
+                                <i class="material-icons pull-right">keyboard_arrow_down</i>
+                            </a>
+                        </div>
+                        <div class="eq-ui-collapsible-body">
+                            <a id='collapsible-nav-css-badges' href='/badges'>Badges</a>
+                            <a id='collapsible-nav-css-color' href='/color'>Color</a>
+                            <a id='collapsible-nav-css-helpers' href='/helpers'>Helpers</a>
+                            <a id='collapsible-nav-css-table' href='/table'>Table</a>
+                            <a id='collapsible-nav-css-grid' href='/grid'>Grid</a>
+                            <a id='collapsible-nav-css-typography' href='/typography'>Typography</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- Layout: Main Content -->
+<main class="eq-ui-main">
+
+    <!-- Layout: Main Content: Title -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>All Post Entries <a class="btn btn-primary eq-ui-btn-fab eq-ui-waves-light"><i class="material-icons">add</i></a></h1>
+        </div>
+    </div>
+
+    <!-- Layout: Main Content: Entries -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Layout: Main Content: Entries: Listing -->
+                <div class="eq-ui-card entry-list">
+
+                    <!-- Entries: Listing: Title -->
+                    <div class="eq-ui-card-title">
+                        <h2 class="eq-ui-card-title-text">New features WebriQ CMS</h2>
+                    </div>
+
+                    <!-- Entries: Listing: Info -->
+                    <div class="eq-ui-card-subheader-info">
+                        <span><i class="material-icons">query_builder</i>25 minutes ago</span>
+                        <span>Published</span>
+                    </div>
+
+                    <!-- Entries: Listing: Short description -->
+                    <div class="eq-ui-card-supporting-text">
+                        With a new markdown editor that anyone can use, our CMS system is now ready for non-technical people looking to manage and update their Static website through Github repositories
+                    </div>
+
+                    <!-- Entries: Listing: Footer buttons -->
+                    <div class="eq-ui-card-actions eq-ui-card-border">
+                        <a class="btn btn-default eq-ui-btn-flat eq-ui-waves">
+                        <i class="material-icons">edit</i>Edit</a>
+                        <a class="btn btn-danger eq-ui-btn-flat eq-ui-waves eq-pastel-red-200 pull-right">
+                        <i class="material-icons">delete</i>Trash</a>
+                    </div>
+                </div>
+
+                <!-- Layout: Main Content: Entries: Listing -->
+                <div class="eq-ui-card entry-list">
+
+                    <!-- Entries: Listing: Title -->
+                    <div class="eq-ui-card-title">
+                        <h2 class="eq-ui-card-title-text">Is it time to give up on your WordPress site?</h2>
+                    </div>
+
+                    <!-- Entries: Listing: Info -->
+                    <div class="eq-ui-card-subheader-info">
+                        <span><i class="material-icons">query_builder</i>3 Weeks ago</span>
+                        <span>Draft</span>
+                    </div>
+
+                    <!-- Entries: Listing: Short description -->
+                    <div class="eq-ui-card-supporting-text">
+                        WordPress is turning into the security equivalent of Swiss cheese, it may be time to stop using WordPress online and start to use technology stack that are far more secure.
+                    </div>
+
+                    <!-- Entries: Listing: Footer buttons -->
+                    <div class="eq-ui-card-actions eq-ui-card-border">
+                        <a class="btn btn-default eq-ui-btn-flat eq-ui-waves">
+                        <i class="material-icons">edit</i>Edit</a>
+                        <a class="btn btn-danger eq-ui-btn-flat eq-ui-waves eq-pastel-red-200 pull-right">
+                        <i class="material-icons">delete</i>Trash</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript" src='js/webriq-bootstrap-material-ui.min.js'></script>
+<script type="text/javascript">
+(function() {
+
+  $('.cover').parallax("50%", .5);
+
+  var i, resize, md;
+
+  md = window.matchMedia( "(max-width: 768px)" );
+
+  $("div.svg-anim").click(function() {
+    clearInterval(i);
+    return $("div.svg-anim").toggleClass("cross");
+  });
+  resize = function() {
+    if(md.matches) {
+       $('.eq-ui-side-nav-toggle').find('.svg-anim').removeClass('cross')
+    }
+    return $("body").css({
+      "margin-top": ~~((window.innerHeight - 150) / 2) + "px"
+    });
+  };
+  $(window).resize(resize);
+  resize();
+
+}).call(this);
+
+</script>
+</body>
+</html>
