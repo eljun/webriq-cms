@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Implements Google's Material Design in Bootstrap.">
+    <title>WebriQ CMS - File Manager</title>
+    <!-- CSS-->
+    <link rel="icon" href="img/favicon.png" type="image/*">
+    <link rel='stylesheet' href='css/webriq-bootstrap-material-ui.min.css'/>
+
+  </head>
+  <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
+<!--[if lt IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Layout: Header -->
+<header class="eq-ui-layout-header">
+    <div id="main-eq-ui-app-bar" class="eq-ui-app-bar">
+        <div class="container-fluid">
+
+            <!-- Layout: Header: Logo -->
+            <div class="brand ">
+                <a href="#">
+                    <img src="img/logo.png" alt="Webriq logo">
+                </a>
+            </div>
+
+            <!-- Layout: Header: Toggle -->
+            <div class="eq-ui-side-nav-toggle">
+                <div class="svg-anim">
+                  <svg viewBox="0 0 800 600">
+                    <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+                    <path d="M300,320 L540,320" id="middle"></path>
+                    <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+                  </svg>
+                </div>
+            </div>
+
+            <!-- Layout: Header: Breadcrumb -->
+            <div class="eq-ui-breadcrumb" data-only-one="true">
+                <ol class="breadcrumb">
+                  <li class="first"><i class="material-icons icon-small">link</i><a href="index.html">Content</a></li>
+                  <li><a href="#">File Manager</a></li>
+                </ol>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<!-- Layout: Sidebar -->
+<div class="eq-ui-side-nav">
+    <div class="eq-ui-side-nav-wrapper">
+        <div class="eq-ui-side-nav-content-wrapper">
+
+            <nav>
+                <!-- Layout: Sidebar: Collapsible Menu -->
+                <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                    <!-- Layout: Sidebar: Collapsible Menu: Heading -->
+                    <li class="eq-ui-menu-header">
+                        <i class="eq-icon-home material-icons material-icon-rounded">home</i>
+                        <div class="eq-ui-dropdown-toggle">
+                            <a data-target="dropdown-test1" class="collapsible-nav-index eq-ui-waves dropdown-trigger eq-ui-dropdown-left-top" data-hover="false">
+                            <span class="eq-ui-site-title">Lanarkshire Chambers of commerce for business</span><span class="eq-ui-site-title-subtext">lanarkshirechamber.co.uk</span><i class="material-icons">keyboard_arrow_down</i></a>
+                            <ul id="dropdown-test1" class="eq-ui-dropdown eq-ui-dropdown-right">
+                                <li>
+                                    <a href="#!"><i class="material-icons">public</i>Visit Site</a>
+                                </li>
+                                <li>
+                                    <a href="#!"><i class="material-icons">reply_all</i>Logout</a>
+                                </li>
+                                <li>
+                                    <a href="#!"><i class="material-icons">headset_mic</i>Help</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- Layout: Sidebar: Collapsible Menu: Save Buttons -->
+                    <li class="nav-header eq-ui-entry-buttons">
+                        <div class="row">
+                            <div class="col-md-12 post-title">
+                                <p>Navigation</p>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 post-buttons">
+                                <a class="btn btn-default eq-ui-waves-light btn-block eq-ui-btn-bordered"><i class="material-icons">loop</i> Add New</a>
+                                <a class="btn btn-primary eq-ui-waves-light btn-block"><i class="material-icons">edit</i> Save</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- Layout: Main Content -->
+<main class="eq-ui-main eq-ui-entry-page">
+
+    <!-- Layout: Main Content: Heading -->
+    <div class="jumbotron">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="eq-ui-card-actions eq-ui-card-border text-center">
+                    <a href="index.html" class="btn btn-default eq-ui-btn-flat eq-ui-waves waves-effect pull-left light-blue-200">
+                        <i class="material-icons">arrow_back</i>Back
+                    </a>
+                    <p class="light-blue-200">File Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Layout: Main Content: Entries -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <ul class="eq-ui-json-wrapper eq-ui-collapsible popout" data-collapsible="expandable">
+
+                    <li>
+
+                        <!-- Entries: Listing: Heading -->
+                        <div class="eq-ui-collapsible-header active waves-effect">
+                            <a><i class="material-icons">keyboard_arrow_right</i>Entry</a>
+                        </div>
+
+                        <!-- Entries: Listing: Remove Entry -->
+                        <div class="eq-ui-input eq-ui-list-actions">
+                            <a href="#" class="eq-ui-icon-remove">
+                            <i class="material-icons eq-pastel-red-200">delete</i></a>
+                        </div>
+
+                        <!-- Entries: Listing: Content Entry -->
+                        <div class="eq-ui-collapsible-body">
+                            <div class="eq-ui-collapsible-body-inner">
+
+                                <!-- Entries: Listing: Widget: String -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="eq-ui-form-group eq-ui-input-field">
+                                            <input id="site_title" type="text" class="eq-ui-input" value="Webfactories Sales 2017">
+                                            <label for="site_title">File Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Entries: Listing: Widget: Image -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="site_favicon">File upload</label>
+                                        <div class="eq-ui-form-group eq-ui-input-field eq-ui-input-upload">
+                                            <ul class="eq-ui-list eq-ui-file-upload-drop-zone">
+                                                <div class="eq-ui-file-upload-drop-zone-message doc-drop-zone-message">
+                                                    DRAG & DROP HERE<br>
+                                                    <span class="doc-drop-zone-message-browse">or <span class="doc-drop-zone-message-browse-link">Browse</span></span>
+                                                </div>
+                                            </ul>
+                                            <div class="eq-ui-entry-upload-value">
+                                              <span class="eq-ui-entry-text"><i class="material-icons">link</i>/files/webfactories-products-sales-2017.pdf</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+
+                        <!-- Entries: Listing: Heading -->
+                        <div class="eq-ui-collapsible-header active waves-effect">
+                            <a><i class="material-icons">keyboard_arrow_right</i>Entry</a>
+                        </div>
+
+                        <!-- Entries: Listing: Remove Entry -->
+                        <div class="eq-ui-input eq-ui-list-actions">
+                            <a href="#" class="eq-ui-icon-remove">
+                            <i class="material-icons eq-pastel-red-200">delete</i></a>
+                        </div>
+
+                        <!-- Entries: Listing: Content Entry -->
+                        <div class="eq-ui-collapsible-body">
+                            <div class="eq-ui-collapsible-body-inner">
+
+                                <!-- Entries: Listing: Widget: String -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="eq-ui-form-group eq-ui-input-field">
+                                            <input id="site_title" type="text" class="eq-ui-input" value="WebriQ Brochure Updates 2017">
+                                            <label for="site_title">File Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Entries: Listing: Widget: Image -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="site_favicon">File upload</label>
+                                        <div class="eq-ui-form-group eq-ui-input-field eq-ui-input-upload">
+                                            <ul class="eq-ui-list eq-ui-file-upload-drop-zone">
+                                                <div class="eq-ui-file-upload-drop-zone-message doc-drop-zone-message">
+                                                    DRAG & DROP HERE<br>
+                                                    <span class="doc-drop-zone-message-browse">or <span class="doc-drop-zone-message-browse-link">Browse</span></span>
+                                                </div>
+                                            </ul>
+                                            <div class="eq-ui-entry-upload-value">
+                                              <span class="eq-ui-entry-text"><i class="material-icons">link</i>/files/webriq-brochure-updates-2017.doc</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript" src='js/webriq-bootstrap-material-ui.min.js'></script>
+<script type="text/javascript">
+(function() {
+
+    // Create File Upload Drop
+    var _dropzone = EqUI.forms.file_upload_drop('.eq-ui-file-upload-drop-zone', {
+        url: 'http://domain/upload/',
+        defaultImageThumbnail: "assets/img/doc/files/empty.png"
+    });
+
+    // File Upload Drop - Sample Event
+    _dropzone.on("addedfile", function(file) {
+        console.log(file);
+    });
+
+  var i, resize, md;
+
+  md = window.matchMedia( "(max-width: 768px)" );
+
+  $("div.svg-anim").click(function() {
+    clearInterval(i);
+    return $("div.svg-anim").toggleClass("cross");
+  });
+  resize = function() {
+    if(md.matches) {
+       $('.eq-ui-side-nav-toggle').find('.svg-anim').removeClass('cross')
+    }
+    return $("body").css({
+      "margin-top": ~~((window.innerHeight - 150) / 2) + "px"
+    });
+  };
+  $(window).resize(resize);
+  resize();
+
+}).call(this);
+
+
+$(document).ready(function(){
+    // Add animation on accordion
+    // var c = $('.eq-ui-json-wrapper.eq-ui-collapsible');
+
+    // $(c).find('li').each(function(){
+    //     // if($(c).find('li .eq-ui-collapsible-header').attr('class') == 'active') {
+    //     //     $(c).find('.eq-ui-collapsible-header .material-icons').text('keyboard_arrow_down');
+    //     // }else {
+    //     //     $(c).find('.eq-ui-collapsible-header .material-icons').text('keyboard_arrow_right');
+    //     // }
+    //     $(this).click(function(){
+    //         console.log($(this).find('li' + $(thi)))
+    //     })
+    // })
+})
+</script>
+</body>
+</html>
