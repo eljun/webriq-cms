@@ -8624,7 +8624,21 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
   line-height: 3rem;
   text-decoration: none;
 }
-
+.eq-ui-side-nav nav .eq-ui-collapsible li .eq-ui-collapsible-body .eq-ui-entry-upload-value .eq-ui-entry-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 170px;
+    float: left;
+}
+.eq-ui-side-nav nav .eq-ui-collapsible li .eq-ui-collapsible-body .eq-ui-entry-upload-value a {
+  padding: 0;
+  line-height: inherit;
+  text-align: center
+}
+.eq-ui-side-nav nav .eq-ui-collapsible li .eq-ui-collapsible-body .eq-ui-entry-upload-value a .material-icons {
+  margin: 0;
+}
 .eq-ui-side-nav nav .eq-ui-collapsible li .eq-ui-collapsible-body a:hover, .eq-ui-side-nav nav .eq-ui-collapsible li .eq-ui-collapsible-body a.active {
   text-decoration: none;
   color: #2196F3;
@@ -9200,16 +9214,26 @@ path#middle {
 }
 
 /* Layout: Sidebar Menu -> Input type File */
-.eq-ui-entry-upload-dropzone {
+.eq-ui-side-nav-content-wrapper .eq-ui-entry-upload-dropzone {
   margin-top: 25px;
-    margin-bottom: 15px;
+  margin-bottom: 25px;
+}
+.eq-ui-entry-upload-dropzone {
+  margin-bottom: 15px;
+}
+.eq-ui-entry-upload-dropzone .eq-ui-input-field {
+  margin-top: 5px;
 }
 .eq-ui-entry-upload-dropzone .eq-ui-input-field{
   background-color: #fff;
   border: 1px dashed rgba(0,0,0, .22);
-  height: 80px;
-  margin-top: 0px;
   text-align: center;
+  border: 2px dashed #c1c7cd;
+  background: #f5f5f5;
+  border-radius: 5px;
+  min-height: 130px;
+  padding: 40px;
+  cursor: pointer;
 }
 .eq-ui-entry-upload-dropzone .eq-ui-input-field:hover,
 .eq-ui-entry-upload-dropzone .eq-ui-input-field:focus {
@@ -9221,12 +9245,13 @@ path#middle {
 }
 .eq-ui-entry-upload-dropzone .eq-ui-input-field input[type="file"] {
   width: 100%;
-  height: 80px;
+  min-height: 155px;
   opacity: 0;
   position: absolute;
     left: 0;
     top: 0;
     cursor: default;
+  padding: 40px 40px;
 }
 
 /* Layout: Navigation */
@@ -9512,7 +9537,7 @@ path#middle {
  .eq-ui-entry-page .eq-ui-entry-text {
    color: rgba(0,0,0,.54);
  }
- .eq-ui-entry-page .eq-ui-entry-upload-value .material-icons{
+ .eq-ui-entry-page .eq-ui-entry-upload-value .eq-ui-entry-text .material-icons{
     font-size: 18px;
     color: #29B6F6;
     border: 2px solid #E1F5FE;
@@ -9533,12 +9558,12 @@ path#middle {
   .eq-ui-entry-page .eq-ui-collapsible li {
     position: relative;
   }
-   .eq-ui-entry-page .eq-ui-collapsible .material-icons {
+  .eq-ui-entry-page .eq-ui-collapsible .eq-ui-entry-upload-dropzone .eq-ui-entry-text .material-icons {
    margin-top: -3px;
    margin-left: 30px;
    transition: all 200ms ease-in-out;
  }
- .eq-ui-entry-page .eq-ui-collapsible .eq-ui-input-upload:hover .eq-ui-entry-text .material-icons {
+ .eq-ui-entry-page .eq-ui-collapsible .eq-ui-entry-upload-dropzone:hover .eq-ui-entry-text .material-icons {
    background-color: #4FC3F7;
    transform: rotate(-145deg) scale(1.3);
    -webkit-transform: rotate(-145deg) scale(1.3);
@@ -9546,7 +9571,14 @@ path#middle {
    color: rgba(255,255,255,.87);
    border-color: #4FC3F7
  }
-
+.eq-ui-entry-page .eq-ui-collapsible .eq-ui-entry-upload-dropzone .eq-ui-entry-upload-value a{
+  display: inline-block !important;
+  width: 30px;
+  text-align: center;
+}
+.eq-ui-entry-page .eq-ui-collapsible .eq-ui-entry-upload-dropzone .eq-ui-entry-upload-value a.pull-right .material-icons {
+   margin: 0px;
+}
 .eq-ui-entry-page .eq-ui-list-actions {
   position: absolute;
   top: 5px;
@@ -9578,3 +9610,37 @@ path#middle {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
 }
+
+/* Layout: Markdown Editor */
+
+.editor-toolbar {
+  border: 1px solid rgba(0,0,0, .38) !important;
+  border-radius: 0px;
+  opacity: 1 !important; }
+
+.CodeMirror {
+  border: none !important; }
+
+.editor-toolbar:after, .editor-toolbar:before {
+  height: 0px !important;
+  margin: 0px; }
+
+.editor-toolbar a {
+  font-size: 18px;
+  color: rgba(0,0,0, .75) !important;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: 0px; }
+
+.editor-toolbar a.active, .editor-toolbar a:hover {
+  background: transparent;
+  border: none;
+  color: rgba(0,0,0, .87) !important;
+  }
+
+.editor-toolbar i.separator {
+  height: 40px; }
+
+.editor-toolbar i.separator {
+  border-left: 1px solid rgba(0,0,0, ); 
+  }
